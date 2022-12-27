@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BC760B8295B684E006BE70F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC760B7295B684E006BE70F /* InfoViewController.swift */; };
+		5BC760BA295B69DA006BE70F /* AppRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC760B9295B69DA006BE70F /* AppRatingViewController.swift */; };
 		5BD530B52958FE1B006BF8D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD530B42958FE1B006BF8D1 /* AppDelegate.swift */; };
 		5BD530B72958FE1B006BF8D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD530B62958FE1B006BF8D1 /* SceneDelegate.swift */; };
 		5BD530B92958FE1B006BF8D1 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD530B82958FE1B006BF8D1 /* ContainerViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BC760B7295B684E006BE70F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		5BC760B9295B69DA006BE70F /* AppRatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRatingViewController.swift; sourceTree = "<group>"; };
 		5BD530B12958FE1B006BF8D1 /* Side-Menu-UIKIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Side-Menu-UIKIT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BD530B42958FE1B006BF8D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BD530B62958FE1B006BF8D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 				5BD530B42958FE1B006BF8D1 /* AppDelegate.swift */,
 				5BD530B62958FE1B006BF8D1 /* SceneDelegate.swift */,
 				5BD530B82958FE1B006BF8D1 /* ContainerViewController.swift */,
+				5BC760B9295B69DA006BE70F /* AppRatingViewController.swift */,
+				5BC760B7295B684E006BE70F /* InfoViewController.swift */,
 				5BD530BD2958FE1B006BF8D1 /* Assets.xcassets */,
 				5BD530BF2958FE1B006BF8D1 /* LaunchScreen.storyboard */,
 				5BD530C22958FE1B006BF8D1 /* Info.plist */,
@@ -140,9 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BC760B8295B684E006BE70F /* InfoViewController.swift in Sources */,
 				5BD530B92958FE1B006BF8D1 /* ContainerViewController.swift in Sources */,
 				5BDAE813295A420A0071C8D1 /* MenuViewController.swift in Sources */,
 				5BD530B52958FE1B006BF8D1 /* AppDelegate.swift in Sources */,
+				5BC760BA295B69DA006BE70F /* AppRatingViewController.swift in Sources */,
 				5BD530B72958FE1B006BF8D1 /* SceneDelegate.swift in Sources */,
 				5BDAE811295A41FF0071C8D1 /* HomeViewController.swift in Sources */,
 			);

@@ -7,14 +7,39 @@
 
 import UIKit
 
+//to enable menu elements selection
+protocol MenuViewControllerDelegate: AnyObject
+{
+    func didSelect(menuItem: MenuViewController.MenuOptions)
+}
 class MenuViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
 
+    weak var delegate: MenuViewControllerDelegate?
+    
     enum MenuOptions: String, CaseIterable {
         case home = "Home"
         case info = "Information"
         case appRating = "App Rating"
         case shareApp = "Share App"
         case settings = "Settings"
+        
+        var imageName: String {
+            switch self {
+            case .home:
+                return "house"
+            case .info:
+                return "airplane"
+            case .appRating:
+                return "star"
+            case .shareApp:
+                return "message"
+            case .settings:
+                return "gear"
+                
+            }
+        }
+    
+    
     }
     
     private let tableview: UITableView = {
@@ -23,7 +48,9 @@ class MenuViewController: UIViewController , UITableViewDelegate, UITableViewDat
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return table
     }()
+    
     private let greyColor = UIColor(red: 33/255.0,green: 33/225.0 , blue: 33/255.0, alpha: 1)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableview)
@@ -46,6 +73,9 @@ class MenuViewController: UIViewController , UITableViewDelegate, UITableViewDat
         let cell = tableview.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = MenuOptions.allCases[indexPath.row].rawValue
         cell.textLabel?.textColor = .white
+        cell.imageView?.image = UIImage(systemName: MenuOptions.allCases[indexPath.row].imageName)
+        cell.imageView?.tintColor = .white
+        
         cell.backgroundColor = greyColor
         cell.contentView.backgroundColor = greyColor
         return cell
@@ -54,6 +84,8 @@ class MenuViewController: UIViewController , UITableViewDelegate, UITableViewDat
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableview.deselectRow(at: indexPath, animated: true)
+        let item = MenuOptions.allCases[indexPath.row]
+        delegate?.didSelect(menuItem: item)
     }
 
 }
